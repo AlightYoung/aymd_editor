@@ -2,6 +2,7 @@
   "name": "aymd_editor",
   "version": "0.1.0",
   "private": true,
+  "description": "a markdown editor using react & electron",
   "dependencies": {
     "highlight.js": "^11.7.0",
     "marked": "^4.2.3",
