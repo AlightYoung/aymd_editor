@@ -2,6 +2,7 @@
   "name": "aymd_editor",
   "version": "0.1.0",
   "private": true,
+  "main": "public/electron-main.js",
   "description": "a markdown editor using react & electron",
   "dependencies": {
     "highlight.js": "^11.7.0",
@@ -13,7 +14,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "dev": "concurrently -k \"npm start\" \"npm run electron\"",
+    "electron": "wait-on tcp:3000 && electron ."
   },
   "browserslist": {
     "production": [
@@ -26,5 +30,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "electron": "^22.0.0",
+    "electron-is-dev": "^2.0.0",
+    "wait-on": "^6.0.1"
   }
 }
